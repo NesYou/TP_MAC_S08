@@ -1,0 +1,11 @@
+#Retirer les dépendances de classe à classe
+    ✔ Unite @done (2018-2-5 15:07:12)
+    ☐ Joueur
+    ☐ Attaque
+
+#Stratégie type unité
+    ☐ Genre
+    ☐ Peuple
+
+#Rendre évolutive l'interface
+    ☐ Façade ?
