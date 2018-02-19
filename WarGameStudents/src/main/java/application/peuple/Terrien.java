@@ -1,6 +1,6 @@
 package application.peuple;
 
-import application.Unite;
+import application.unite.Unite;
 
 public class Terrien implements IPeuple {
 

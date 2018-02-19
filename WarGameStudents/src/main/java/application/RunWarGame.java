@@ -1,9 +1,14 @@
 package application;
 
+import application.attaque.IAttaque;
 import application.genre.Grenade;
 import application.genre.Sniper;
+import application.joueur.FabriqueJoueur;
+import application.joueur.IFabriqueJoueur;
+import application.joueur.Joueur;
 import application.peuple.Martien;
 import application.peuple.Terrien;
+import application.unite.IUnite;
 
 import java.util.Collection;
 import java.util.Scanner;
@@ -11,6 +16,7 @@ import java.util.Scanner;
 
 public class RunWarGame {
 
+	static IFabriqueJoueur fJoueur = new FabriqueJoueur();
 
 	public static int selectionnerRace(int x, int y) {
 		int choix;
@@ -37,10 +43,10 @@ public class RunWarGame {
 				} while(cx!= 1 && cx != 2);
 				IUnite u =joueur.creerUnite();
 				if (cx == 1) {
-					joueur.changerTypeUnite(u.getNom(),new Sniper());
+					joueur.changerTypeUnite(u.getNom(),new Sniper(u.getAtt(), u.getPortee()));
 				}
 				else {
-					joueur.changerTypeUnite(u.getNom(),new Grenade());
+					joueur.changerTypeUnite(u.getNom(),new Grenade(u.getAtt(), u.getPortee()));
 				}
 				break;
 			}
@@ -152,18 +158,12 @@ public class RunWarGame {
 		Joueur[] joueurs = new Joueur[2];
 		int joueurCourant = 0;
 		if (c1 == 1) {
-			joueurs[0] = new Joueur(pseudo1,new Martien(),0,0);
+			joueurs[0] = fJoueur.creerJoueur(1,pseudo1,0,0);
 
-		}
-		else {
-			joueurs[0] = new Joueur(pseudo1,new Terrien(),0,0);
 		}
 		if (c2 == 1) {
-			joueurs[1] = new Joueur(pseudo2,new Martien(),5,5);
+			joueurs[1] = fJoueur.creerJoueur(2,pseudo2,5,5);
 
-		}
-		else {
-			joueurs[1] = new Joueur(pseudo2,new Terrien(),5,5);
 		}
 
 

@@ -1,4 +1,4 @@
-package application;
+package application.attaque;
 
 public interface IAttaque {
     int getImpactY();

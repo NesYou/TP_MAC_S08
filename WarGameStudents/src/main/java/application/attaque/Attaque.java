@@ -1,4 +1,4 @@
-package application;
+package application.attaque;
 
 public class Attaque implements IAttaque {
 	int degat;

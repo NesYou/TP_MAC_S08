@@ -1,7 +1,7 @@
 package application.genre;
 
-import application.Attaque;
-import application.IAttaque;
+import application.attaque.Attaque;
+import application.attaque.IAttaque;
 
 public class Poison extends Genre {
 
@@ -9,9 +9,9 @@ public class Poison extends Genre {
     private static final int PORTEE_POISON = -3;
     private static final int RAYON_POISON = 50;
 
-    public Poison() {
-        this.setAttaqueSpe(this.getAttaqueSpe() + ATTAQUE_POISON);
-        this.setPorteeSpe(this.getPorteeSpe() + PORTEE_POISON);
+    public Poison(int attaque, int portee) {
+        this.setAttaqueSpe(attaque + ATTAQUE_POISON);
+        this.setPorteeSpe(portee + PORTEE_POISON);
         this.setRayonSpe(RAYON_POISON);
         this.setPoison(true);
     }

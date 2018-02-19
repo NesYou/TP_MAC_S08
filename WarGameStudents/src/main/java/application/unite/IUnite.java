@@ -1,5 +1,6 @@
-package application;
+package application.unite;
 
+import application.attaque.IAttaque;
 import application.genre.Genre;
 
 public interface IUnite {
@@ -20,6 +21,8 @@ public interface IUnite {
     int getXpos();
 
     int getYpos();
+
+    int getPortee();
 
     void deplace(int x, int y);
 

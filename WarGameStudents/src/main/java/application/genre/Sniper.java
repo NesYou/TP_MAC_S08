@@ -1,7 +1,7 @@
 package application.genre;
 
-import application.Attaque;
-import application.IAttaque;
+import application.attaque.Attaque;
+import application.attaque.IAttaque;
 
 public class Sniper extends Genre {
 
@@ -9,9 +9,9 @@ public class Sniper extends Genre {
     private static final int PORTEE_SNIPER = 3;
     private static final int RAYON_SNIPER = 1;
 
-    public Sniper() {
-        this.setAttaqueSpe(this.getAttaqueSpe() + ATTAQUE_SNIPER);
-        this.setPorteeSpe(this.getPorteeSpe() + PORTEE_SNIPER);
+    public Sniper(int attaque, int portee) {
+        this.setAttaqueSpe(attaque + ATTAQUE_SNIPER);
+        this.setPorteeSpe(portee + PORTEE_SNIPER);
         this.setRayonSpe(RAYON_SNIPER);
         this.setPoison(false);
     }

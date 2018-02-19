@@ -1,5 +1,7 @@
-package application;
+package application.unite;
 
+import application.attaque.Attaque;
+import application.attaque.IAttaque;
 import application.genre.Genre;
 import application.genre.Standard;
 
@@ -24,7 +26,7 @@ public class Unite implements IUnite {
 		this.vie = vie;
 		this.xpos = xpos;
 		this.ypos = ypos;
-		this.g = new Standard();
+		this.g = new Standard(att);
 		empoisonne=false;
 	}
 	
@@ -71,6 +73,11 @@ public class Unite implements IUnite {
 	@Override
 	public int getYpos() {
 		return ypos;
+	}
+
+	@Override
+	public int getPortee() {
+		return this.portee;
 	}
 	
 	@Override

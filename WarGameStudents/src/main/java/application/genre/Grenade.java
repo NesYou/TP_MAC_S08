@@ -1,7 +1,7 @@
 package application.genre;
 
-import application.Attaque;
-import application.IAttaque;
+import application.attaque.Attaque;
+import application.attaque.IAttaque;
 
 public class Grenade extends Genre{
 
@@ -9,9 +9,9 @@ public class Grenade extends Genre{
     private static final int PORTEE_GRENADE = -3;
     private static final int RAYON_GRENADE = 20;
 
-    public Grenade() {
-        this.setAttaqueSpe(this.getAttaqueSpe() + ATTAQUE_GRENADE);
-        this.setPorteeSpe(this.getPorteeSpe() + PORTEE_GRENADE);
+    public Grenade(int attaque, int portee) {
+        this.setAttaqueSpe(attaque + ATTAQUE_GRENADE);
+        this.setPorteeSpe(portee + PORTEE_GRENADE);
         this.setRayonSpe(RAYON_GRENADE);
         this.setPoison(false);
     }

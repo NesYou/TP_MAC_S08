@@ -1,6 +1,6 @@
 package application.genre;
 
-import application.IAttaque;
+import application.attaque.IAttaque;
 
 public interface IGenre {
 

@@ -1,14 +1,14 @@
 package application.genre;
 
-import application.Attaque;
-import application.IAttaque;
+import application.attaque.Attaque;
+import application.attaque.IAttaque;
 
 public class Standard extends Genre {
 
     private static final int PORTEE_STANDARD = 10;
 
-    public Standard() {
-        this.setAttaqueSpe(this.getAttaqueSpe());
+    public Standard(int attaque) {
+        this.setAttaqueSpe(attaque);
         this.setPorteeSpe(PORTEE_STANDARD);
         this.setRayonSpe(this.getRayonSpe());
         this.setPoison(false);

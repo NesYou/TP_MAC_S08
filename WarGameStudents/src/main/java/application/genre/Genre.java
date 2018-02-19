@@ -1,8 +1,5 @@
 package application.genre;
 
-import application.Attaque;
-import application.IAttaque;
-
 public abstract class Genre implements IGenre {
 
     private int attaqueSpe;

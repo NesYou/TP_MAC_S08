@@ -1,5 +1,8 @@
-package application;
+package application.joueur;
 
+import application.unite.IUnite;
+import application.attaque.Attaque;
+import application.attaque.IAttaque;
 import application.genre.Genre;
 import application.peuple.IPeuple;
 

@@ -1,5 +1,7 @@
-package application;
+package application.joueur;
 
+import application.unite.IUnite;
+import application.attaque.IAttaque;
 import application.genre.Genre;
 
 import java.util.Collection;
