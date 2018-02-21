@@ -161,9 +161,15 @@ public class RunWarGame {
 			joueurs[0] = fJoueur.creerJoueur(1,pseudo1,0,0);
 
 		}
+		else {
+			joueurs[0] = fJoueur.creerJoueur(2,pseudo1,0,0);
+		}
 		if (c2 == 1) {
-			joueurs[1] = fJoueur.creerJoueur(2,pseudo2,5,5);
+			joueurs[1] = fJoueur.creerJoueur(1,pseudo2,0,0);
 
+		}
+		else {
+			joueurs[1] = fJoueur.creerJoueur(2,pseudo2,0,0);
 		}
 
 
@@ -176,7 +182,6 @@ public class RunWarGame {
 			actionJeu(joueurs[joueurCourant],joueurs[(joueurCourant+1)%2]);
 			joueurCourant = (joueurCourant +1)%2;
 		}while (joueurs[0].getArmee().size()>0 && joueurs[1].getArmee().size()>0);
-
 
 	}
 
