@@ -6,6 +6,6 @@ import application.unite.IUnite;
 
 public interface IWarGame {
 
-    IUnite creerUniter(Joueur joueur);
+    String getNomJoueur(Joueur joueur);
 
 }

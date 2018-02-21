@@ -17,6 +17,7 @@ import java.util.Scanner;
 public class RunWarGame {
 
 	static IFabriqueJoueur fJoueur = new FabriqueJoueur();
+	static IWarGame maFacade = new WarGame();
 
 	public static int selectionnerRace(int x, int y) {
 		int choix;
@@ -35,7 +36,7 @@ public class RunWarGame {
 			case 1 : {
 				int cx;
 				do {
-					System.out.println(joueur.getNom() + ", voici types d'unite possibles :\n");
+					System.out.println(maFacade.getNomJoueur(joueur) + ", voici types d'unite possibles :\n");
 					System.out.println("1 - Former un Sniper");
 					System.out.println("2 - Former un Grenadier");
 					Scanner sc = new Scanner(System.in);
