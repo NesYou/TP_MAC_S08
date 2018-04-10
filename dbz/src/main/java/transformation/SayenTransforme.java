@@ -30,20 +30,26 @@ public abstract class SayenTransforme implements ITransformation {
 
     //TODO
     public ISayen transformationSS1() {
+
         return null;
     }
 
     public AttaqueNonControlee getAttaqueNonControlee() {
+
         return new AttaqueNonControlee(getPuissanceReelle());
+
     }
 
     public VagueDeferlante creerVagueDeferlante() {
+
         return new VagueDeferlante(getPuissanceReelle());
+
     }
 
     public void attaquerCoupDePoing() {
 
     }
+
     public void voler() {
 
         System.out.println("Je vole !");
